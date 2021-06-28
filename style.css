@@ -1,0 +1,135 @@
+body {
+    background-color: #2F5D62;
+}
+
+h1 {
+    font-family: 'Fira Sans', sans-serif;
+    color: white;
+    font-weight: 400;
+    font-size: 27pt;
+    text-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.shadow {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+#avatar {
+    height: 200px;
+    width: 200px;
+    background-color: #5F939A;
+    background-image: url(boss-baby.png);
+    background-size: 100%;
+    border-radius: 50%;
+    border: 4px solid #DFEEEA;
+    margin-bottom: 16px;
+    cursor: pointer;
+}
+
+#info {
+    width: 512px;
+    font-size: 11pt;
+    max-width: 100%;
+    background-color: #DFEEEA;
+    margin-top: 24px;
+    font-weight: 200;
+    font-family: 'Fira Sans', sans-serif;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.flexbox_center {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: row;
+    padding: 12px !important;
+}
+
+.flexbox_center div {
+    vertical-align: middle;
+    margin: 5px;
+}
+
+.big {
+    font-size: 15pt;
+    font-weight: 400;
+}
+
+.small {
+    padding-top: 3px;
+}
+
+.progress {
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.progress:last-child {
+    margin-bottom: 0;
+}
+
+.progress div:first-of-type {
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.progress div:last-child {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.progress_bar {
+    flex-grow: 2;
+}
+
+.progress_bar_fill {
+    height: 5px;
+    background-color: #2F5D62;
+    transition: width 1000ms ease;
+    margin: 6px 0 0 0;
+    float: left;
+    width: 0%;
+}
+
+.spacing {
+    flex-grow: 2;
+}
+
+.progress_status {
+    vertical-align: middle;
+    text-align: right;
+    margin: 0 0 0 6px;
+}
+
+.date_entry {
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    /* padding: 12px !important; */
+}
+
+.date_entry div {
+    vertical-align: middle;
+    text-align: left;
+    margin: 5px;
+}
+
+.date_entry div:first-child {
+    width: 75px;
+    border-right: 1px solid #2F5D62;
+    font-weight: 400;
+}
+
+.date_entry div:last-child {
+    padding-left: 10px;
+}
