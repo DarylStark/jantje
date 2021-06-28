@@ -1,0 +1,23 @@
+{
+    // Python configuration
+    "python.pythonPath": "env\\Scripts\\python.exe",
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.autoImportCompletions": true,
+    // Python linting
+    "python.linting.enabled": true,
+    "python.analysis.extraPaths": [
+        "src"
+    ],
+    "python.linting.ignorePatterns": [
+        "tests/**/*"
+    ],
+    "python.linting.pylintEnabled": true,
+    "python.linting.pycodestyleEnabled": true,
+    // Python formatting
+    "editor.formatOnSave": true,
+    "python.formatting.provider": "autopep8",
+    "python.formatting.autopep8Args": [
+        "--ignore",
+        "E402"
+    ]
+}
