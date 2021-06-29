@@ -63,30 +63,12 @@
         </div>
         <div id='info'
             class='shadow'>
+            {% for date in dates %}
             <div class='date_entry'>
-                <div>27 januari</div>
-                <div>Uitgerekend</div>
+                <div>{{ date.date }}</div>
+                <div>{{ date.data }}</div>
             </div>
-            <div class='date_entry'>
-                <div>6 juli</div>
-                <div>Termijnecho</div>
-            </div>
-            <div class='date_entry'>
-                <div>25 juni</div>
-                <div>Bekend maken bij de familie</div>
-            </div>
-            <div class='date_entry'>
-                <div>21 juni</div>
-                <div>Tweede echo</div>
-            </div>
-            <div class='date_entry'>
-                <div>10 juni</div>
-                <div>Eerste echo</div>
-            </div>
-            <div class='date_entry'>
-                <div>18 mei</div>
-                <div>Positieve zwangerschapstest</div>
-            </div>
+            {% endfor %}
         </div>
     </div>
     <script src='script.js'></script>

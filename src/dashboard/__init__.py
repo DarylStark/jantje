@@ -59,7 +59,8 @@ def index() -> Optional[Union[str, Response]]:
                 'trimester': int(round((preg.age_in_days % 93 / 93) * 100, 0)),
                 'pregnancy': int(round((preg.age_in_days / 280) * 100, 0))
             }
-        }
+        },
+        'dates': ConfigLoader.config['dates']
     }
 
     # Render the template
