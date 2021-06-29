@@ -10,8 +10,8 @@ from config_loader import ConfigLoader
 import logging
 import jinja2
 from pregnancy import Pregnancy
+from datetime import date
 # ---------------------------------------------------------------------
-# Load the configurationdetails
 # Load the settings
 if not ConfigLoader.load_settings():
     raise TypeError(
@@ -40,6 +40,27 @@ flask_app = Flask(__name__, static_folder='../res/img/')
 # Configure Jinja2
 jinja_loader = jinja2.FileSystemLoader(searchpath="./")
 jinja_env = jinja2.Environment(loader=jinja_loader)
+
+
+def filter_display_date(value: date, show_year: bool = False) -> str:
+    """ Jinja filter that converts a DateTime object to a human
+        readable string. Example: 2022-01-27 will be converted to
+        1 januari 2022. """
+
+    # List with months in dutch
+    months = [
+        'januari', 'februari', 'maart', 'april', 'mei', 'juni',
+        'juli', 'augustus', 'september', 'oktober', 'november', 'december'
+    ]
+
+    rv = f'{value.day} {months[value.month - 1]}'
+    if show_year:
+        rv += f' {value.year}'
+    return rv
+
+
+# Add filters to Jinja2
+jinja_env.filters['display_date'] = filter_display_date
 
 
 # Add the handlers

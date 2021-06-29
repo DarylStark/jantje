@@ -36,7 +36,7 @@
         <div id='info'
             class='shadow flexbox_center'>
             <div class='small'>Uitgerekend op </div>
-            <div class='big'>{{ baby.due }}</div>
+            <div class='big'>{{ baby.due|display_date(true) }}</div>
         </div>
         <div id='info'
             class='shadow'>
@@ -65,7 +65,7 @@
             class='shadow'>
             {% for date in dates %}
             <div class='date_entry'>
-                <div>{{ date.date }}</div>
+                <div>{{ date.date|display_date }}</div>
                 <div>{{ date.data }}</div>
             </div>
             {% endfor %}
