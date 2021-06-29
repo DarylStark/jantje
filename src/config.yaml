@@ -9,12 +9,28 @@ default:
       conception_date: "2021-04-22"
     dates:
       - date: 2021-05-18
-        data: Positieve zwangerschapstest
+        data: "Positieve zwangerschapstest"
       - date: 2021-06-10
-        data: Eerste echo
+        data: "Eerste echo"
       - date: 2021-06-21
-        data: Tweede echo
+        data: "Tweede echo"
       - date: 2021-06-25
-        data: Bekend maken bij de familie
+        data: "Bekend maken bij de direct familie"
+      - date: 2021-06-26
+        data: "Bekend maken bij Ingrid"
       - date: 2021-07-06
-        data: Termijnecho
+        data: "Termijnecho en bloedafname NIPT"
+      - date: 2021-06-12
+        data: "Bekend maken bij Tim en Elke"
+      - date: 2021-06-15
+        data: "Bekend maken bij Kim en Nena"
+      - date: 2021-07-03
+        data: "Bekend maken bij Laura"
+      - date: 2021-07-11
+        data: "Bekend maken bij Noortje en Martin"
+      - date: 2021-07-07
+        data: "Bekend maken bij Ron (kantoor)"
+      - date: 2021-07-08
+        data: "Bekend maken op kantoor"
+      - date: 2021-07-20
+        data: "Bekend maken bij Routz"

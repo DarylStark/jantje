@@ -57,4 +57,9 @@ class Pregnancy:
     def days_till_due_date(self) -> int:
         """ Returns the days till due date. """
         return (self.due_date - date.today()).days
+
+    @property
+    def week(self) -> int:
+        """ Returns in which week of the pregnancy you are. """
+        return self.age_in_weeks + 1
 # ---------------------------------------------------------------------

@@ -26,12 +26,27 @@
         <div id='avatar'
             class='shadow'> </div>
         <div id='info'
-            class='shadow flexbox_center'>
-            <div class='big'>{{ baby.weeks }}</div>
-            <div class='small'>weken</div>
-            <div class='small'>en</div>
-            <div class='big'>{{ baby.days }}</div>
-            <div class='small'>dagen</div>
+            class='shadow'>
+            <div class='flexbox_center'>
+                <div class='small'>We zitten in week</div>
+                <div class='big'>{{ baby.pregnancy_week }}</div>
+                <div class='small'>en zijn</div>
+            </div>
+            <div class='flexbox_center'>
+                <div class='big'>{{ baby.weeks }}</div>
+                <div class='small'>weken</div>
+                {% if baby.days > 0 %}
+                <div class='small'>en</div>
+                <div class='big'>{{ baby.days }}</div>
+                {% if baby.days > 1 %}
+                <div class='small'>dagen zwanger</div>
+                {% else %}
+                <div class='small'>dag zwanger</div>
+                {% endif %}
+                {% else %}
+                <div class='small'>zwanger</div>
+                {% endif %}
+            </div>
         </div>
         <div id='info'
             class='shadow flexbox_center'>
