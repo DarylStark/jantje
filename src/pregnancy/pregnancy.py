@@ -57,31 +57,4 @@ class Pregnancy:
     def days_till_due_date(self) -> int:
         """ Returns the days till due date. """
         return (self.due_date - date.today()).days
-
-
-if __name__ == '__main__':
-    console = Console()
-
-    # Initialize the baby
-    jantje = Baby(conception_date='2021-04-22')
-    jantje.name = 'Jantje'
-
-    # Print progress
-    console.print(f'\n[u][b]{jantje.name}[/b][/u]\n')
-    console.print(f'Progress:   {jantje.age}')
-    console.print(f'Percentage: {round(jantje.percentage, 2)}%')
-    console.print(f'Trimester:  {jantje.trimester}')
-    console.print(f'Due date:   {jantje.due_date}')
-    console.print(f'Days left:  {jantje.days_till_due_date}')
-
-    console.print('\n[u][b]Progress trackers:[/b][/u]\n')
-
-    with Progress(expand=True, console=console) as progress:
-        complete = progress.add_task('[green]Pregnancy', total=(40 * 7))
-        progress.update(complete, advance=jantje.age_in_days)
-
-    with Progress(expand=True, console=console) as trimester:
-        complete = trimester.add_task('[green]Trimester', total=(93))
-        trimester.update(complete, advance=(jantje.age_in_days % 93))
-
-    console.print()
+# ---------------------------------------------------------------------
