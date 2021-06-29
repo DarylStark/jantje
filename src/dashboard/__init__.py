@@ -6,9 +6,16 @@
 from flask import Flask, Response, render_template
 from typing import Union, Optional
 from rich.logging import RichHandler
+from config_loader import ConfigLoader
 import logging
 import jinja2
 # ---------------------------------------------------------------------
+# Load the configurationdetails
+# Load the settings
+if not ConfigLoader.load_settings():
+    raise TypeError(
+        f'Configuration was not yet loaded.')
+
 # Configure logging
 logging.basicConfig(
     level=logging.DEBUG,

@@ -1,0 +1,8 @@
+---
+default:
+  environments:
+    - "production"
+
+  config:
+    baby:
+      date: "2022-01-27"
