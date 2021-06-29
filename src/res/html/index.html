@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Jantje</title>
+    <title>{{ baby.name }}</title>
     <meta name='viewport'
         content='width=device-width, initial-scale=1.0'>
     <link rel='preconnect'
@@ -21,33 +21,33 @@
 
 <body>
     <div style='display: flex; flex-direction: column; align-items: center;'>
-        <h1>Jantje</h1>
+        <h1>{{ baby.name }}</h1>
 
         <div id='avatar'
             class='shadow'> </div>
         <div id='info'
             class='shadow flexbox_center'>
-            <div class='big'>9</div>
+            <div class='big'>{{ baby.weeks }}</div>
             <div class='small'>weken</div>
             <div class='small'>en</div>
-            <div class='big'>3</div>
+            <div class='big'>{{ baby.days }}</div>
             <div class='small'>dagen</div>
         </div>
         <div id='info'
             class='shadow flexbox_center'>
             <div class='small'>Uitgerekend op </div>
-            <div class='big'>27 januari 2022</div>
+            <div class='big'>{{ baby.due }}</div>
         </div>
         <div id='info'
             class='shadow'>
             <div class='progress'>
-                <div>Trimester</div>
+                <div>Trimester {{ baby.trimester }}</div>
                 <div>
                     <div class='progress_bar'>
                         <div class='progress_bar_fill'
-                            data-percentage='50'></div>
+                            data-percentage='{{ baby.progress.trimester }}'></div>
                     </div>
-                    <div class='progress_status'></div>
+                    <div class='progress_status'>{{ baby.progress.trimester }}%</div>
                 </div>
             </div>
             <div class='progress'>
@@ -55,9 +55,9 @@
                 <div>
                     <div class='progress_bar'>
                         <div class='progress_bar_fill'
-                            data-percentage='75'></div>
+                            data-percentage='{{ baby.progress.pregnancy }}'></div>
                     </div>
-                    <div class='progress_status'></div>
+                    <div class='progress_status'>{{ baby.progress.pregnancy }}%</div>
                 </div>
             </div>
         </div>

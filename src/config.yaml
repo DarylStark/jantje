@@ -5,4 +5,5 @@ default:
 
   config:
     baby:
-      date: "2022-01-27"
+      name: "Jantje"
+      conception_date: "2021-04-22"

@@ -9,6 +9,7 @@ from rich.logging import RichHandler
 from config_loader import ConfigLoader
 import logging
 import jinja2
+from pregnancy import Pregnancy
 # ---------------------------------------------------------------------
 # Load the configurationdetails
 # Load the settings
@@ -24,8 +25,13 @@ logging.basicConfig(
     handlers=[RichHandler()]
 )
 
+# Create a Pregnancy object to track the pregnancy
+preg = Pregnancy(
+    conception_date=ConfigLoader.config['baby']['conception_date'])
+preg.name = ConfigLoader.config['baby']['name']
+
 # Create a logger for the My REST API package
-logger = logging.getLogger('Jantje')
+logger = logging.getLogger(preg.name)
 
 # Create a Flask object
 logger.debug('Creating Flask object')
@@ -40,9 +46,26 @@ jinja_env = jinja2.Environment(loader=jinja_loader)
 @flask_app.route('/', methods=['GET'])
 def index() -> Optional[Union[str, Response]]:
     """ Main page of the application """
+
+    # Set a object for the template
+    data = {
+        'baby': {
+            'name': preg.name,
+            'weeks': preg.age_in_weeks,
+            'days': preg.age_in_days % 7,
+            'due': preg.due_date,
+            'trimester': preg.trimester,
+            'progress': {
+                'trimester': int(round((preg.age_in_days % 93 / 93) * 100, 0)),
+                'pregnancy': int(round((preg.age_in_days / 280) * 100, 0))
+            }
+        }
+    }
+
+    # Render the template
     template = jinja_env.get_template('res/html/index.html')
     return Response(
-        template.render(),
+        template.render(data),
         content_type='text/html; charset=utf-8'
     )
 
