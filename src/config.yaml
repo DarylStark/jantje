@@ -15,7 +15,7 @@ default:
       - date: 2021-06-21
         data: "Tweede echo"
       - date: 2021-06-25
-        data: "Bekend maken bij de direct familie"
+        data: "Bekend maken bij de directe familie"
       - date: 2021-06-26
         data: "Bekend maken bij Ingrid"
       - date: 2021-07-06
@@ -31,6 +31,6 @@ default:
       - date: 2021-07-07
         data: "Bekend maken bij Ron (kantoor)"
       - date: 2021-07-08
-        data: "Bekend maken op kantoor"
+        data: "Bekend maken bij Eurailscout"
       - date: 2021-07-20
         data: "Bekend maken bij Routz"
