@@ -24,7 +24,7 @@
         <h1>{{ baby.name }}</h1>
 
         <div id='avatar'
-            class='shadow'> </div>
+            class='shadow {% if random %}female{% else %}male{% endif %}'> </div>
         <div id='info'
             class='shadow'>
             <div class='flexbox_center'>

@@ -11,6 +11,7 @@ import logging
 import jinja2
 from pregnancy import Pregnancy
 from datetime import date
+import random
 # ---------------------------------------------------------------------
 # Load the settings
 if not ConfigLoader.load_settings():
@@ -85,7 +86,8 @@ def index() -> Optional[Union[str, Response]]:
                 'pregnancy': int(round((preg.age_in_days / 280) * 100, 0))
             }
         },
-        'dates': ConfigLoader.config['dates']
+        'dates': ConfigLoader.config['dates'],
+        'random': random.randint(1, 100) % 2 == 0
     }
 
     # Render the template
@@ -117,7 +119,13 @@ def script() -> Optional[Union[str, Response]]:
 
 
 @flask_app.route('/boss-baby.png', methods=['GET'])
-def avatar() -> Optional[Union[str, Response]]:
+def avatar_male() -> Optional[Union[str, Response]]:
     """ Image """
     return flask_app.send_static_file('boss-baby.png')
+
+
+@flask_app.route('/agnes.png', methods=['GET'])
+def avatar_female() -> Optional[Union[str, Response]]:
+    """ Image """
+    return flask_app.send_static_file('agnes.png')
 # ---------------------------------------------------------------------
