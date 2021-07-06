@@ -6,7 +6,7 @@ default:
   config:
     baby:
       name: "Jantje"
-      conception_date: "2021-04-22"
+      conception_date: "2021-04-17"
     dates:
       - date: 2021-05-18
         data: "Positieve zwangerschapstest"
@@ -19,7 +19,7 @@ default:
       - date: 2021-06-26
         data: "Bekend maken bij Ingrid"
       - date: 2021-07-06
-        data: "Termijnecho en bloedafname NIPT"
+        data: "Termijnecho en bloedafname NIPT. Bekend maken rest van de families"
       - date: 2021-06-12
         data: "Bekend maken bij Tim en Elke"
       - date: 2021-06-15
@@ -36,3 +36,7 @@ default:
         data: "Bekend maken bij Routz"
       - date: 2021-07-02
         data: "Bekend maken bij Rens en Judith"
+      - date: 2021-08-09
+        data: "16 weken controle"
+      - date: 2021-07-18
+        data: "Uiterlijke datum uitslag NIPT"
