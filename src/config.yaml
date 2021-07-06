@@ -40,3 +40,5 @@ default:
         data: "16 weken controle"
       - date: 2021-07-18
         data: "Uiterlijke datum uitslag NIPT"
+      - date: 2021-07-08
+        data: "Bekend maken bij Ed en Petra"
