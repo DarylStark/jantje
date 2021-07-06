@@ -31,7 +31,7 @@ default:
       - date: 2021-07-07
         data: "Bekend maken bij Ron (Eurailscout)"
       - date: 2021-07-08
-        data: "Bekend maken bij Eurailscout"
+        data: "Bekend maken bij Eurailscout en Ed en Petra"
       - date: 2021-07-20
         data: "Bekend maken bij Routz"
       - date: 2021-07-02
@@ -40,5 +40,3 @@ default:
         data: "16 weken controle"
       - date: 2021-07-18
         data: "Uiterlijke datum uitslag NIPT"
-      - date: 2021-07-08
-        data: "Bekend maken bij Ed en Petra"
