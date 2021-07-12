@@ -133,7 +133,7 @@ h1 {
 }
 
 .date_entry div:first-child {
-    min-width: 80px;
+    min-width: 100px;
     border-right: 1px solid #2F5D62;
     font-weight: 400;
 }
