@@ -5,3 +5,5 @@ gunicorn
 pycodestyle
 autopep8
 pyyaml
+sqlalchemy
+pymysql

@@ -12,6 +12,7 @@ import jinja2
 from pregnancy import Pregnancy
 from datetime import date
 import random
+from jantje_database.agendaitems import get_agenda_items
 # ---------------------------------------------------------------------
 # Load the settings
 if not ConfigLoader.load_settings():
@@ -86,7 +87,7 @@ def index() -> Optional[Union[str, Response]]:
                 'pregnancy': int(round((preg.age_in_days / 280) * 100, 0))
             }
         },
-        'dates': ConfigLoader.config['dates'],
+        'dates': get_agenda_items(),
         'random': random.randint(1, 100) % 2 == 0
     }
 

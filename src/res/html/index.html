@@ -80,8 +80,8 @@
             class='shadow'>
             {% for date in dates %}
             <div class='date_entry'>
-                <div>{{ date.date|display_date }}</div>
-                <div>{{ date.data }}</div>
+                <div>{{ date.datetime|display_date }}</div>
+                <div>{{ date.description }}</div>
             </div>
             {% endfor %}
         </div>
