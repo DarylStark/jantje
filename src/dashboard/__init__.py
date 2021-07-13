@@ -32,9 +32,6 @@ preg = Pregnancy(
     conception_date=ConfigLoader.config['baby']['conception_date'])
 preg.name = ConfigLoader.config['baby']['name']
 
-# Sort the dates
-ConfigLoader.config['dates'].sort(key=lambda x: x['date'], reverse=True)
-
 # Create a logger for the My REST API package
 logger = logging.getLogger(preg.name)
 
