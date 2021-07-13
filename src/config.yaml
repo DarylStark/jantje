@@ -4,6 +4,11 @@ default:
     - "production"
 
   config:
+    database:
+      server: "${env:DB_SERVER}"
+      username: "${env:DB_USERNAME}"
+      password: "${env:DB_PASSWORD}"
+      database: "${env:DB_DATABASE}"
     baby:
       name: "Jantje"
       conception_date: "2021-04-17"
