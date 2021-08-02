@@ -3,7 +3,7 @@
 """
 # ---------------------------------------------------------------------
 # Imports
-from typing import Optional
+from typing import Optional, Tuple
 from datetime import datetime
 from datetime import date
 from datetime import timedelta
@@ -45,8 +45,42 @@ class Pregnancy:
 
     @property
     def trimester(self) -> int:
-        """ Returns the trimester you're in now. """
-        return int((self.percentage // 33.3333) + 1)
+        """ Returns the trimester you're in now. The pregnancy is
+            divided as follows:
+
+            Trimester 1: week 0 - 12
+            Trimester 2: week 13 - 26
+            Trimester 3: week 26 and onwards
+        """
+        if self.age_in_weeks <= 12:
+            return 1
+        if self.age_in_weeks <= 26:
+            return 2
+        return 3
+
+    @property
+    def trimester_days(self) -> Tuple[int, int]:
+        """ Returns the amount of days that you're in the trimester and
+            the number of days in this trimester. It assumes that the
+            third trimester takes till week 40 """
+
+        # Get the trimester
+        trimester = self.trimester
+
+        # Calculate the days before the trimester
+        days_before = (trimester - 1) * 7 * 12
+
+        # Get the days within this trimester
+        try:
+            trimester_length = (7 * 12, 7 * 12, 7 * 16)[trimester - 1]
+        except IndexError:
+            return (-1, -1)
+
+        # Get the length of the current trimester
+        length = self.age_in_days - days_before
+
+        # Return the value
+        return (length, trimester_length)
 
     @property
     def due_date(self) -> date:

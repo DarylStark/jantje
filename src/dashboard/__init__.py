@@ -80,7 +80,9 @@ def index() -> Optional[Union[str, Response]]:
             'trimester': preg.trimester,
             'pregnancy_week': preg.week,
             'progress': {
-                'trimester': int(round((preg.age_in_days % 93 / 93) * 100, 0)),
+                'trimester':
+                    int((preg.trimester_days[0] /
+                        preg.trimester_days[1]) * 100),
                 'pregnancy': int(round((preg.age_in_days / 280) * 100, 0))
             }
         },
