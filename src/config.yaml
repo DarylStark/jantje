@@ -10,5 +10,5 @@ default:
       password: "${env:DB_PASSWORD}"
       database: "${env:DB_DATABASE}"
     baby:
-      name: "Jantje"
+      name: "Owen"
       conception_date: "2021-04-17"

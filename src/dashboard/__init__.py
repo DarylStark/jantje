@@ -12,7 +12,7 @@ import jinja2
 from pregnancy import Pregnancy
 from datetime import date
 import random
-from jantje_database.agendaitems import get_agenda_items
+from owen_database.agendaitems import get_agenda_items
 # ---------------------------------------------------------------------
 # Load the settings
 if not ConfigLoader.load_settings():

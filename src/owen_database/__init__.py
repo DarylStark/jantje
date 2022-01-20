@@ -1,12 +1,12 @@
 """
-    The `jantje_database` package does all the database handling for
-    the 'Jantje' application.
+    The `owen_database` package does all the database handling for
+    the 'Owen' application.
 """
 from logging import getLogger
 from config_loader import ConfigLoader
 from database import Database
-from jantje_database.exceptions import ConfigNotLoadedError
-from jantje_database_model import *
+from owen_database.exceptions import ConfigNotLoadedError
+from owen_database_model import *
 
 # Load the settings
 if not ConfigLoader.load_settings():
@@ -14,7 +14,7 @@ if not ConfigLoader.load_settings():
         f'Configuration was not yet loaded.')
 
 # Create a Logger
-logger = getLogger('jantje_database')
+logger = getLogger('owen_database')
 
 # Get the database credentials
 # TODO: retrieve this from the configuration

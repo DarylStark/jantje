@@ -3,10 +3,10 @@
 """
 from typing import List, Optional, Type
 from database import DatabaseSession
-from jantje_database_model import AgendaItem
+from owen_database_model import AgendaItem
 from sqlalchemy.orm.query import Query
-from jantje_database import logger
-from jantje_database.exceptions import FilterNotValidError
+from owen_database import logger
+from owen_database.exceptions import FilterNotValidError
 
 
 def get_agenda_items(
